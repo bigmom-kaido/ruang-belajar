@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    color-scheme: light;
+    /* IBM Carbon Design System v11 — White / Gray 10 Layering */
+    --cds-background: #f4f4f4;
+    --cds-layer-01: #ffffff;
+    --cds-layer-02: #f4f4f4;
+    --cds-layer-hover: #e8e8e8;
+    --cds-layer-selected: #e0e0e0;
+    --cds-field: #f4f4f4;
+    --cds-border-subtle: #e0e0e0;
+    --cds-border-strong: #8d8d8d;
+    --cds-text-primary: #161616;
+    --cds-text-secondary: #525252;
+    --cds-text-helper: #6f6f6f;
+    --cds-interactive: #0f62fe;
+    --cds-interactive-hover: #0353e9;
+    --cds-link-primary: #0f62fe;
+    --cds-focus: #0f62fe;
+    --cds-support-success: #24a148;
+    --cds-support-success-soft: #defbe6;
+    --cds-support-teal: #007d79;
+    --cds-support-teal-soft: #d9fbfb;
+    --cds-support-danger: #da1e28;
+    --cds-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --cds-serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    --cds-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+
+  .dark {
+    color-scheme: dark;
+    /* IBM Carbon Design System v11 — Gray 100 (g100) */
+    --cds-background: #161616;
+    --cds-layer-01: #262626;
+    --cds-layer-02: #393939;
+    --cds-layer-hover: #353535;
+    --cds-layer-selected: #393939;
+    --cds-field: #262626;
+    --cds-border-subtle: #393939;
+    --cds-border-strong: #6f6f6f;
+    --cds-text-primary: #f4f4f4;
+    --cds-text-secondary: #c6c6c6;
+    --cds-text-helper: #a8a8a8;
+    --cds-interactive: #0f62fe;
+    --cds-interactive-hover: #0353e9;
+    --cds-link-primary: #78a9ff;
+    --cds-focus: #ffffff;
+    --cds-support-success: #42be65;
+    --cds-support-success-soft: #13311d;
+    --cds-support-teal: #08bdba;
+    --cds-support-teal-soft: #102e2d;
+    --cds-support-danger: #fa4d56;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--cds-background);
+    color: var(--cds-text-primary);
+    font-family: var(--cds-sans);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .dark body {
+    letter-spacing: 0.005em;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--cds-focus);
+    outline-offset: 2px;
+  }
+}
+
+.font-display {
+  font-family: var(--cds-serif);
+}
+
+.font-mono-tabular {
+  font-family: var(--cds-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums-strict {
+  font-variant-numeric: tabular-nums;
+}
+
+.headline-balance {
+  text-wrap: balance;
+}
+
+/* Carbon 2x architectural grid overlay */
+.cds-grid-art {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

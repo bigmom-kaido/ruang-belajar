@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jelajahi direktori sumber belajar, dari dokumenter dan kursus hingga sains, bahasa, dan pemrograman.">
+  <meta name="theme-color" content="#f8f7f2">
+  <title>Ruang Belajar · Direktori sumber belajar</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Lewati ke konten</a>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#/" aria-label="Ruang Belajar, beranda">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Ruang<span class="brand-space"> Belajar</span></span>
+      </a>
+      <form id="search-form" class="search" role="search">
+        <span class="icon icon-search" aria-hidden="true"></span>
+        <input id="search-input" type="search" maxlength="160" aria-label="Cari sumber atau topik" placeholder="Cari sumber atau topik…" autocomplete="off" enterkeyhint="search" disabled>
+        <kbd aria-hidden="true" id="search-key">Ctrl K</kbd>
+      </form>
+      <a class="source-link" id="source-link" target="_blank" rel="noopener noreferrer" hidden>Wiki sumber <span class="external-icon" aria-hidden="true"></span></a>
+      <button class="menu-button" id="menu-button" type="button" aria-controls="sidebar" aria-expanded="false">
+        <span class="icon icon-menu" aria-hidden="true"></span><span>Topik</span>
+      </button>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Navigasi direktori">
+      <a class="side-home" id="side-home" href="#/">
+        <span class="icon icon-home" aria-hidden="true"></span> Ikhtisar
+      </a>
+      <h2 class="side-label">TOPIK</h2>
+      <nav id="topic-nav" aria-label="Topik"></nav>
+    </aside>
+    <main class="main" id="main" tabindex="-1">
+      <p class="loading">Memuat direktori…</p>
+      <noscript><p class="empty-state">Aktifkan JavaScript untuk membuka direktori sumber belajar.</p></noscript>
+    </main>
+  </div>
+  <div class="visually-hidden" id="search-status" role="status" aria-live="polite"></div>
+  <template id="home-template">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> DIREKTORI SUMBER BELAJAR</p>
+        <h1 id="page-title">Jelajahi sumber<br class="hero-break"> belajar.</h1>
+        <p class="hero-copy">Temukan dokumenter, kursus, referensi, dan alat bantu belajar dalam satu direktori.</p>
+        <div class="hero-stats"></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-board">
+          <div class="art-grid"></div>
+          <span class="art-cross art-cross-one"></span><span class="art-cross art-cross-two"></span>
+          <div class="art-card art-card-back"></div>
+          <div class="art-card art-card-mid"></div>
+          <div class="art-card art-card-front">
+            <div class="art-card-tab"></div>
+            <div class="art-card-head"><b></b><span></span><span></span></div>
+            <i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+</body>
+</html>

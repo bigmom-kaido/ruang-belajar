@@ -1,0 +1,6 @@
+{
+  "name": "Ruang Belajar",
+  "description": "Direktori sumber belajar interaktif dengan bookmark, pelacak progres belajar, filter kurasi wiki, tombol kejutan acak, dan mode gelap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
